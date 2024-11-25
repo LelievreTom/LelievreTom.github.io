@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">Tom Lelievre</div>
+    <ul class="nav-links">
+      <li><a href="accueil.html">Présentation</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a href="skills.html">Compétences</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="contact-section">
+    <h2>Contactez-moi</h2>
+    <form id="contactForm">
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" required> <!-- `name="name"` correspond à {{name}} -->
+    
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required> <!-- `name="email"` correspond à {{email}} -->
+    
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" rows="5" required></textarea> <!-- `name="message"` correspond à {{message}} -->
+    
+      <button type="submit">Envoyer</button>
+    </form>
+    
+  </section>
+</main>
+
+<footer>
+  <p>© 2024 Tom Lelievre. Tous droits réservés.</p>
+</footer>
+
+<!-- Inclusion du script JS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
