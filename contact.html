@@ -20,6 +20,8 @@
     </ul>
   </nav>
 </header>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 <main>
   <section class="contact-section">
@@ -34,6 +36,9 @@
       <label for="message">Message :</label>
       <textarea id="message" name="message" rows="5" required></textarea> <!-- `name="message"` correspond à {{message}} -->
     
+        
+      <div class="g-recaptcha" data-sitekey="VOTRE_CLE_SITE"></div>
+      
       <button type="submit">Envoyer</button>
     </form>
     
