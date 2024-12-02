@@ -20,3 +20,21 @@ document.getElementById("contactForm").addEventListener("submit", function(event
       alert("Erreur lors de l'envoi : " + JSON.stringify(error));
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contactForm');
+  
+  contactForm.addEventListener('submit', function(event) {
+    // Vérifie si le reCAPTCHA est validé
+    const recaptchaResponse = grecaptcha.getResponse();
+
+    if (recaptchaResponse.length === 0) {
+      // reCAPTCHA n'est pas validé
+      event.preventDefault(); // Empêche la soumission du formulaire
+      alert('Veuillez valider le reCAPTCHA avant de soumettre le formulaire.');
+    } else {
+      // Le reCAPTCHA est validé - procédez à la soumission
+      console.log('Formulaire soumis avec reCAPTCHA validé.');
+    }
+  });
+});
