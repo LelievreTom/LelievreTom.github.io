@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <script src="https://www.google.com/recaptcha/api.js?render=VOTRE_SITE_KEY"></script>
 </head>
 <body>
 <header>
@@ -20,14 +22,6 @@
     </ul>
   </nav>
 </header>
-
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
-  function onSubmit(token) {
-    document.getElementById("demo-form").submit();
-  }
-</script>
-
 
 
 <main>
@@ -43,11 +37,10 @@
       <label for="message">Message :</label>
       <textarea id="message" name="message" rows="5" required></textarea> <!-- `name="message"` correspond à {{message}} -->
           
-      <button class="g-recaptcha" 
-        data-sitekey="6LebAZAqAAAAAHe_0X-Xv_fCK0ROWqx4rCBxmaa1" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
-
+      <!-- Champ caché pour stocker le jeton reCAPTCHA -->
+      <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+      
+      <button type="submit">Envoyer</button>
     </form>
     
     
@@ -60,6 +53,23 @@
 
 <!-- Inclusion du script JS -->
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<!-- Ajout d'un script JS pour gérer reCAPTCHA -->
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Empêche l'envoi du formulaire avant la validation de reCAPTCHA
+
+    grecaptcha.ready(function() {
+      // Exécute reCAPTCHA et récupère le jeton
+      grecaptcha.execute('VOTRE_SITE_KEY', {action: 'submit'}).then(function(token) {
+        // Ajoute le jeton au champ caché
+        document.getElementById("g-recaptcha-response").value = token;
+
+        // Envoie le formulaire après avoir ajouté le jeton
+        document.getElementById("contactForm").submit();
+      });
+    });
+  });
+</script>
 <script src="js/contact.js"></script>
 </body>
 </html>
