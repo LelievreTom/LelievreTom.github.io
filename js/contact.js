@@ -8,6 +8,11 @@ function envoieMail(form) {
     .then(function() {
       alert("Message envoyé avec succès !");
       console.log("Email envoyé !");
+      document.getElementById("name").value = "";  // Vide le champ "Nom"
+      document.getElementById("email").value = ""; // Vide le champ "Email"
+      document.getElementById("message").value = ""; // Vide le champ "Message"
+
+      
     })
     .catch(function(error) {
       alert("Erreur lors de l'envoi : " + JSON.stringify(error));
