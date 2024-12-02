@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 <header>
@@ -36,7 +38,12 @@
       <label for="message">Message :</label>
       <textarea id="message" name="message" rows="5" required></textarea> <!-- `name="message"` correspond à {{message}} -->
     
-        
+      <div class="form-group row">
+        <div class="col-sm-9">
+          <div class="g-recaptcha" data-sitekey="6LcQBpAqAAAAAD1FbmuHzKd_bqpVdcyIUoEuRnvR"></div>
+        </div>
+      </div>
+
       <div class="g-recaptcha" data-sitekey="6LebAZAqAAAAAHe_0X-Xv_fCK0ROWqx4rCBxmaa1"></div>
       
       <button type="submit">Envoyer</button>
