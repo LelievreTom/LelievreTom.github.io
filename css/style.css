@@ -58,15 +58,34 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-image: url('../images/fond.jpg'); /* Image de fond */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    min-height: 100vh; /* Prend toute la hauteur de l'écran */
+    justify-content: center;
+    padding: 20px;
 }
 
+/* Profil et texte */
+.profile-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Rectangle semi-transparent */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Photo de profil */
 .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 50%; /* Rendre la photo circulaire */
+    border: 4px solid #0078D7;
     overflow: hidden;
     margin-bottom: 1.5rem;
-    border: 4px solid #0078D7;
 }
 
 .profile-pic img {
@@ -75,8 +94,16 @@ main {
     object-fit: cover;
 }
 
+/* Sous-titre */
+.subtitle {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ddd;
+}
+
+/* Texte de présentation */
 .presentation-text {
-    background-color: #fff; /* Fond blanc */
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
     border: 2px solid #0078D7; /* Bordure colorée */
     border-radius: 10px; /* Coins arrondis */
     padding: 1rem 1.5rem; /* Espacement autour du texte */
@@ -101,7 +128,6 @@ main {
     position: relative;
     max-width: 600px;
     margin: 2rem auto;
-
 }
 
 .project {
