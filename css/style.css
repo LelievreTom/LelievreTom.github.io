@@ -59,12 +59,14 @@ main {
     align-items: center;
     text-align: center;
     background-image: url('../images/fond.jpg'); /* Image de fond */
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* L'image s'adapte à la taille de l'écran */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Pas de répétition de l'image */
+    background-attachment: fixed; /* Le fond reste fixe même en scrollant */
     color: #fff;
-    min-height: 100vh; /* Prend toute la hauteur de l'écran */
-    justify-content: center;
-    padding: 20px;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les espacements */
 }
 
 /* Profil et texte */
