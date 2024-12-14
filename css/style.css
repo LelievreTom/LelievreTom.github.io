@@ -156,6 +156,7 @@ main {
     line-height: 1.6;     /* Espacement entre les lignes */
     color: #333;          /* Couleur du texte */
     margin: 0;            /* Supprime les marges par défaut */
+    display: none;
 }
 
 
