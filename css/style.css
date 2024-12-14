@@ -196,43 +196,6 @@ main {
 }
 
 /* Compétences */
-
-/* Styles pour les tableaux */
-.skills-list table {
-    width: auto; /* Laisse le tableau ajuster sa largeur selon le contenu */
-    max-width: 80%; /* Limite la largeur à 80% du conteneur parent */
-    margin-top: 20px;
-    margin-left: auto; /* Centrer horizontalement */
-    margin-right: auto; /* Centrer horizontalement */
-    border-collapse: collapse;
-    table-layout: auto; /* Permet d'ajuster la largeur des colonnes en fonction du contenu */
-}
-
-.skills-list th, .skills-list td {
-    border: 1px solid #0078D7; /* Bordure colorée */
-    padding: 12px;
-    text-align: left;
-}
-
-.skills-list th {
-    background-color: #0078D7; /* Fond coloré pour les en-têtes */
-    color: white;
-    font-weight: bold;
-}
-
-.skills-list td {
-    background-color: #f9f9f9; /* Fond clair pour les lignes */
-}
-
-.skills-list tr:nth-child(even) td {
-    background-color: #f1f1f1; /* Fond plus clair pour les lignes paires */
-}
-
-.skills-list tr:hover td {
-    background-color: #e0e0e0; /* Survol d'une ligne */
-}
-
-/* Section des compétences */
 .skills-section {
     text-align: center;
 }
