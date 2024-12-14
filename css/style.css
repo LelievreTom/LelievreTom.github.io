@@ -185,12 +185,12 @@ main {
 
 /* Décaler la flèche gauche */
 .arrow.left {
-    left: -40px;  /* Décalage supplémentaire vers la gauche */
+    left: -45px;  /* Décalage supplémentaire vers la gauche */
 }
 
 /* Décaler la flèche droite */
 .arrow.right {
-    right: -40px; /* Décalage supplémentaire vers la droite */
+    right: -45px; /* Décalage supplémentaire vers la droite */
 }
 
 /* Changer la couleur au survol */
