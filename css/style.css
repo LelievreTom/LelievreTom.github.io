@@ -156,10 +156,10 @@ main {
     line-height: 1.6;     /* Espacement entre les lignes */
     color: #333;          /* Couleur du texte */
     margin: 0;            /* Supprime les marges par défaut */
-    display: none;
+    display: none;        /* Cache tous les projets au départ */
 }
 
-
+/* Affiche uniquement le projet actif */
 .project.active {
     display: block;
 }
@@ -194,6 +194,7 @@ main {
 .arrow:hover {
     background-color: #005a9e;
 }
+
 
 /* Compétences */
 .skills-section {
@@ -279,17 +280,6 @@ main {
 
 .contact-section button:hover {
     background-color: #005a9e;
-}
-
-/* Footer */
-footer {
-    background: #0078D7;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
 /* Responsive */
