@@ -196,11 +196,16 @@ main {
 }
 
 /* Compétences */
+
 /* Styles pour les tableaux */
 .skills-list table {
-    width: 100%;
-    border-collapse: collapse;
+    width: auto; /* Laisse le tableau ajuster sa largeur selon le contenu */
+    max-width: 80%; /* Limite la largeur à 80% du conteneur parent */
     margin-top: 20px;
+    margin-left: auto; /* Centrer horizontalement */
+    margin-right: auto; /* Centrer horizontalement */
+    border-collapse: collapse;
+    table-layout: auto; /* Permet d'ajuster la largeur des colonnes en fonction du contenu */
 }
 
 .skills-list th, .skills-list td {
