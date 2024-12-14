@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: #0078D7;
+    background: linear-gradient(135deg, #005a9e, #87CEFA); /* Dégradé bleu profond vers bleu ciel */
     color: #fff;
     padding: 1rem 2rem;
     position: sticky;
@@ -129,13 +129,14 @@ main {
     margin-top: 1rem; /* Marge au-dessus */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
     max-width: 80%; /* Limite la largeur */
-    text-align: left; /* Texte aligné à gauche */
+    text-align: justify; /* Justifie le texte */
+    font-size: 1.1rem;   /* Taille de police pour une bonne lisibilité */
+    line-height: 1.6;    /* Espacement entre les lignes */
+    color: #333;         /* Couleur du texte */
 }
 
 .presentation-text p {
-    font-size: 1.1rem;
-    color: #333; /* Couleur du texte */
-    line-height: 1.6;
+    margin: 0; /* Supprime les marges par défaut */
 }
 
 /* Projets */
@@ -150,9 +151,13 @@ main {
 }
 
 .project {
-    display: none;
-    text-align: center;
+    text-align: justify; /* Justifie le texte */
+    font-size: 1.1rem;    /* Taille de police pour une meilleure lisibilité */
+    line-height: 1.6;     /* Espacement entre les lignes */
+    color: #333;          /* Couleur du texte */
+    margin: 0;            /* Supprime les marges par défaut */
 }
+
 
 .project.active {
     display: block;
@@ -190,6 +195,38 @@ main {
 }
 
 /* Compétences */
+/* Styles pour les tableaux */
+.skills-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.skills-list th, .skills-list td {
+    border: 1px solid #0078D7; /* Bordure colorée */
+    padding: 12px;
+    text-align: left;
+}
+
+.skills-list th {
+    background-color: #0078D7; /* Fond coloré pour les en-têtes */
+    color: white;
+    font-weight: bold;
+}
+
+.skills-list td {
+    background-color: #f9f9f9; /* Fond clair pour les lignes */
+}
+
+.skills-list tr:nth-child(even) td {
+    background-color: #f1f1f1; /* Fond plus clair pour les lignes paires */
+}
+
+.skills-list tr:hover td {
+    background-color: #e0e0e0; /* Survol d'une ligne */
+}
+
+/* Section des compétences */
 .skills-section {
     text-align: center;
 }
@@ -235,6 +272,7 @@ main {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
+
 
 /* Contact */
 .contact-section {
