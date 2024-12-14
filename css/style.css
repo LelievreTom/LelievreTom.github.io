@@ -199,6 +199,7 @@ main {
 /* Compétences */
 .skills-section {
     text-align: center;
+    padding: 2rem 0;
 }
 
 .skills-buttons {
@@ -221,27 +222,58 @@ main {
     background-color: #005a9e;
 }
 
+.skills-content {
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    padding: 20px;
+}
+
 .skills-list {
     display: none;
+    margin-top: 20px;
+    width: 80%; /* Limite la largeur du tableau */
+    max-width: 600px; /* Largeur maximale */
+    border-collapse: collapse; /* Pour que les bordures du tableau soient bien collées */
 }
 
 .skills-list.active {
     display: block;
 }
 
-.skills-list ul {
-    list-style: none;
-    padding: 0;
+.skills-list table {
+    width: 100%; /* Le tableau prend toute la largeur de son conteneur */
+    border: 1px solid #0078D7; /* Bordure bleu */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    background-color: #fff;
 }
 
-.skills-list ul li {
-    background: #fff;
-    margin: 0.5rem auto;
-    padding: 0.75rem 1.5rem;
-    max-width: 400px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+.skills-list th,
+.skills-list td {
+    padding: 10px 15px; /* Espacement interne */
+    text-align: left; /* Alignement du texte à gauche */
+    border: 1px solid #0078D7; /* Bordures des cellules */
 }
+
+.skills-list th {
+    background-color: #0078D7;
+    color: #fff;
+    font-weight: 600;
+}
+
+.skills-list td {
+    background-color: #f5f5f5;
+}
+
+.skills-list tr:nth-child(even) td {
+    background-color: #e1f0ff; /* Fond légèrement différent pour les lignes paires */
+}
+
+.skills-list tr:hover td {
+    background-color: #d3e7f9; /* Fond au survol */
+}
+
 
 
 /* Contact */
