@@ -254,7 +254,7 @@ main {
 .skills-list th,
 .skills-list td {
     padding: 10px 15px; /* Espacement interne */
-    text-align: justify; /* Alignement du texte à gauche */
+    text-align: center; /* Alignement du texte à gauche */
     border: 1px solid #0078D7; /* Bordures des cellules */
 }
 
