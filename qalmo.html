@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection vers l'application</title>
+  <script>
+    window.onload = function () {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Remplace ces liens par ceux de ton application
+      const playStoreURL = "https://play.google.com/store/apps/details?id=com.frdev.qalmo&pcampaignid=web_share";
+      const appStoreURL = "https://apps.apple.com/fr/app/qalmo/id6502453401";
+
+      if (/android/i.test(userAgent)) {
+        window.location.href = playStoreURL;
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = appStoreURL;
+      }
+    };
+  </script>
+</head>
+</html>
