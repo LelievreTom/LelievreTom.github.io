@@ -9,15 +9,21 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const os = platform.os;
-      console.log("OS détecté :", os);
+      const os = platform.os || "Inconnu";
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      console.log("OS détecté par platform.js :", os);
+      console.log("User agent :", userAgent);
 
       const playStoreURL = "https://play.google.com/store/apps/details?id=com.frdev.qalmo&pcampaignid=web_share";
       const appStoreURL = "https://apps.apple.com/fr/app/qalmo/id6502453401";
 
-      if (os === "Android") {
+      const isAndroid = /android/i.test(userAgent);
+      const isiOS = /iPhone|iPad|iPod/i.test(userAgent);
+
+      if (isAndroid) {
         window.location.href = playStoreURL;
-      } else if (os === "iOS") {
+      } else if (isiOS) {
         window.location.href = appStoreURL;
       } else {
         alert("OS non pris en charge : " + os);
@@ -26,6 +32,6 @@
   </script>
 </head>
 <body>
-  <h1>Redirection en cours !!!</h1>
+  <h1>Redirection en cours !!</h1>
 </body>
 </html>
