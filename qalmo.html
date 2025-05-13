@@ -9,7 +9,7 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const os = platform.os || "Inconnu";
+      const os = navigator.userAgent;
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       console.log("OS détecté par platform.js :", os);
