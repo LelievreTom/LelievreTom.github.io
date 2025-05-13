@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Redirection vers l'application</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
+
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    document.addEventListener("DOMContentLoaded", function () {
+      const os = platform.os.family;
+      console.log("OS détecté :", os);
 
-    console.log("User Agent:", userAgent); // pour debug
+      const playStoreURL = "https://play.google.com/store/apps/details?id=com.frdev.qalmo&pcampaignid=web_share";
+      const appStoreURL = "https://apps.apple.com/fr/app/qalmo/id6502453401";
 
-    const playStoreURL = "https://play.google.com/store/apps/details?id=com.frdev.qalmo&pcampaignid=web_share";
-    const appStoreURL = "https://apps.apple.com/fr/app/qalmo/id6502453401";
-
-    if (/android/i.test(userAgent)) {
-      window.location.href = playStoreURL;
-    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      window.location.href = appStoreURL;
-    }
-  });
-</script>
-
+      if (os === "Android") {
+        window.location.href = playStoreURL;
+      } else if (os === "iOS") {
+        window.location.href = appStoreURL;
+      } else {
+        alert("OS non pris en charge : " + os);
+      }
+    });
+  </script>
 </head>
 <body>
-    <h1>La page a bien chargée V2</h1>
+  <h1>Redirection en cours ? je crois... j'espère...</h1>
 </body>
 </html>
