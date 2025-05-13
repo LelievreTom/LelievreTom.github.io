@@ -9,30 +9,23 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-      console.log("User agent détecté :", userAgent);
+      const os = platform.os || "";
+      console.log("OS détecté :", os);
 
       const playStoreURL = "https://play.google.com/store/apps/details?id=com.frdev.qalmo&pcampaignid=web_share";
       const appStoreURL = "https://apps.apple.com/fr/app/qalmo/id6502453401";
 
-      const isAndroid = /android/i.test(userAgent);
-      const isiOS = /iPhone|iPad|iPod/i.test(userAgent);
-
-      // Temporisation pour permettre à la page de bien se charger
-      setTimeout(function() {
-        if (isAndroid) {
-          window.location.href = playStoreURL;
-        } else if (isiOS) {
-          window.location.href = appStoreURL;
-        } else {
-          alert("OS non pris en charge : " + userAgent);
-        }
-      }, 1000); // 1 seconde
+      if (/Android/i.test(os)) {
+        window.location.href = playStoreURL;
+      } else if (/iOS/i.test(os)) {
+        window.location.href = appStoreURL;
+      } else {
+        alert("OS non pris en charge : " + os);
+      }
     });
   </script>
 </head>
 <body>
-  <h1>Redirection en cours ... je crois ? </h1>
+  <h1>Redirection en cours ? je crois... j'espère... ouais...</h1>
 </body>
 </html>
